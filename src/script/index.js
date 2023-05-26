@@ -6,6 +6,12 @@ const encryptionMap = {
   u: "ufat",
 };
 
+async function copyPaste() {
+  const copyText = document.querySelector(".result").innerHTML;
+
+  await navigator.clipboard.writeText(copyText);
+}
+
 function encrypt() {
   const inputElement = document.querySelector(".inputText");
   const resultElement = document.querySelector(".result");
