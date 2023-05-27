@@ -22,9 +22,12 @@ function encrypt() {
   let text = inputText.toLowerCase();
 
   if (inputText === "") {
-    errorMessage.textContent = "Digite pelo menos uma letra";
+    errorMessage.textContent = "Digite uma palavra para criptografar";
     return;
   }
+
+  errorMessage.textContent = "";
+
   hiddenDiv();
 
   for (let i = 0; i < text.length; i++) {
@@ -55,6 +58,9 @@ function decrypt() {
     errorMessage.textContent = "Digite uma palavra encriptada";
     return;
   }
+
+  errorMessage.textContent = "";
+
   hiddenDiv();
 
   let result = "";
@@ -80,9 +86,9 @@ function decrypt() {
 }
 
 function hiddenDiv() {
-  let elements = document.getElementsByClassName("non-text");
-  for (let i = 0; i < elements.length; i++) {
-    let element = elements[i];
-    element.style.display = "none";
-  }
+  const nonText = document.querySelector(".non-text");
+  const withText = document.querySelector(".with-text");
+
+  nonText.style.display = "none";
+  withText.style.display = "flex";
 }

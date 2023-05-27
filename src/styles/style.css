@@ -7,45 +7,86 @@
 body {
   background: #e5e5e5;
   overflow: hidden;
+  font-family: "Inter", sans-serif;
 }
 
 .logo {
   margin: 40px 0 0 84px;
+  width: 32px;
 }
 
-input {
+textarea {
   position: absolute;
   left: 35%;
-  top: 10%;
-  transform: translate(-60%, -50%);
+  top: 20%;
+  transform: translate(-70%, -15%);
   width: 320px;
-  height: 644px;
+  height: 420px;
   font-size: 32px;
   background: #e5e5e5;
+  color: #0a3871;
+  word-wrap: break-word;
   border: none;
   outline: none;
+  resize: none;
 }
 
-input::placeholder {
+textarea::placeholder {
   color: #0a3871;
 }
 
 main {
+  bottom: 40px;
   position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.errorMessage {
+  color: red;
+  margin: 0 0 300px 300px;
+  z-index: 2;
+}
+
+.non-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.non-text p {
+  font-size: 16px;
+  color: #495057;
+  text-align: center;
+
+  margin-top: 16px;
+}
+
+h2 {
+  text-align: center;
+  margin-left: 30px;
+  font-size: 24px;
+  color: #343a40;
 }
 
 .left-bar {
-  width: 400px;
-  height: 420px;
+  position: relative;
+  background: #ffffff;
+  width: 380px;
+  height: 570px;
   border-radius: 32px;
-  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.88);
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
   margin-right: 40px;
+  margin-top: -20px;
 }
 
 .with-text {
-  display: flex;
+  position: relative;
+  display: none;
+  color: #495057;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -60,10 +101,24 @@ main {
 }
 
 .with-text button {
-  margin-bottom: 32px;
+  margin-bottom: -50px;
+  background: #ffffff;
+  color: #0a3871;
+  width: 336px;
+  padding: 24px;
+  border: 1px solid #0a3871;
+  border-radius: 24px;
+}
+
+button:hover {
+  transition: background 0.2s ease-in-out;
+  background: #70a7e6;
 }
 
 .buttons {
+  position: absolute;
+  bottom: 60px;
+  left: -40px;
 }
 
 .encrypy {
@@ -76,6 +131,11 @@ main {
   color: #ffffff;
 }
 
+.encrypy:hover {
+  transition: background 0.2s ease-in-out;
+  background: #5c95ff;
+}
+
 .descrypt {
   border: none;
   width: 328px;
@@ -86,9 +146,10 @@ main {
   color: #0a3871;
 }
 
-.encrypy:hover {
-  transition: background 0.1s ease-in-out;
-  background: #a288e3;
+.descrypt:hover {
+  transition: all 0.2s ease-in-out;
+  background: #495057;
+  color: #ffffff;
 }
 
 .description {
@@ -98,11 +159,14 @@ main {
 
 footer {
   display: flex;
+  position: relative;
   flex-direction: column;
   margin-left: 240px;
 }
 
 .icon-field {
+  position: absolute;
+  top: -150px;
   display: flex;
   gap: 8px;
 }
