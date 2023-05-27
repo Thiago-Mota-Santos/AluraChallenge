@@ -10,6 +10,19 @@ async function copyPaste() {
   const copyText = document.querySelector(".result").innerHTML;
 
   await navigator.clipboard.writeText(copyText);
+
+  const messageCopy = document.querySelector(".with-text");
+  const originalContent = messageCopy.innerHTML;
+
+  messageCopy.innerHTML = `
+   <div class="msg-copy fade-in">
+   <h3> Copiado para a área de transferência </h3>
+   <div>
+  `;
+
+  setTimeout(() => {
+    messageCopy.innerHTML = originalContent;
+  }, 1000);
 }
 
 function encrypt() {
