@@ -184,7 +184,7 @@ button:hover {
   color: #495057;
 }
 
-footer {
+.below {
   display: flex;
   position: relative;
   flex-direction: column;

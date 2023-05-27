@@ -36,6 +36,7 @@ function encrypt() {
 
   if (inputText === "") {
     errorMessage.textContent = "Digite uma palavra para criptografar";
+
     return;
   }
 
