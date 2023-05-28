@@ -14,8 +14,9 @@
     <img src="./src/assets/alura-logo.svg" alt="Alura-logo" class="logo">    
 </header>
     <main>
+        <div class="input-container">
         <textarea type="text" placeholder="Insira seu texto" class="inputText"></textarea>
-        <p class="errorMessage"></p>
+        </div>
         <div class="left-bar">
 
             <div class="non-text">
@@ -28,22 +29,21 @@
                 <p class="result"></p>
                 <button onclick="copyPaste()">Copiar</button>
             </div>
-
         </div>
+
+        <div class="below">
+            <div class="icon-field">
+                <img src="./src/assets/info.svg" alt="info icon">
+                <p class="description">Apenas letras minúsculas e sem acento.</p>
+            </div>
+            <div class="buttons">
+                <button class="encrypy" onclick="encrypt()">Criptografar</button>
+                <button class="descrypt" onclick="decrypt()">Descriptografar</button>
+            </div>
+        </div>
+
     </main>
-
-    <div class="below">
-        <div class="icon-field">
-            <img src="./src/assets/info.svg" alt="info icon">
-            <p class="description">Apenas letras minúsculas e sem acento.</p>
-        </div>
-        <div class="buttons">
-            <button class="encrypy" onclick="encrypt()">Criptografar</button>
-            <button class="descrypt" onclick="decrypt()">Descriptografar</button>
-        </div>
-    </div>
-
-
+    
 </head>
 <body>
     

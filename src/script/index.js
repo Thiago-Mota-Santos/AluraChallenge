@@ -28,19 +28,25 @@ async function copyPaste() {
 function encrypt() {
   const inputElement = document.querySelector(".inputText");
   const resultElement = document.querySelector(".result");
-  const errorMessage = document.querySelector(".errorMessage");
+  const errorMessage = document.querySelector(".non-text");
   const inputText = inputElement.value.trim();
+  const nonText = document.querySelector(".non-text");
+  const withText = document.querySelector(".with-text");
 
   let result = "";
   let text = inputText.toLowerCase();
 
   if (inputText === "") {
-    errorMessage.textContent = "Digite uma palavra para criptografar";
+    errorMessage.classList.add("active");
+    nonText.style.display = "flex";
+    withText.style.display = "none";
+
+    setTimeout(function () {
+      errorMessage.classList.remove("active");
+    }, 50);
 
     return;
   }
-
-  errorMessage.textContent = "";
 
   hiddenDiv();
 
@@ -65,15 +71,22 @@ for (let key in encryptionMap) {
 function decrypt() {
   const inputElement = document.querySelector(".inputText");
   const resultElement = document.querySelector(".result");
-  const errorMessage = document.querySelector(".errorMessage");
+  const errorMessage = document.querySelector(".non-text");
   const inputText = inputElement.value.trim();
+  const nonText = document.querySelector(".non-text");
+  const withText = document.querySelector(".with-text");
 
   if (inputText === "") {
-    errorMessage.textContent = "Digite uma palavra encriptada";
+    errorMessage.classList.add("active");
+    nonText.style.display = "flex";
+    withText.style.display = "none";
+
+    setTimeout(function () {
+      errorMessage.classList.remove("active");
+    }, 50);
+
     return;
   }
-
-  errorMessage.textContent = "";
 
   hiddenDiv();
 
