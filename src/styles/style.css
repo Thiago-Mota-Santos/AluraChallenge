@@ -6,7 +6,6 @@
 
 body {
   background: #e5e5e5;
-  overflow: hidden;
   font-family: "Inter", sans-serif;
 }
 
@@ -195,12 +194,13 @@ button:hover {
   border-radius: 28px;
   background: #d8dfe8;
   color: #0a3871;
+  border: 1px solid #0a3871;
 }
 
 .descrypt:hover {
   transition: all 0.2s ease-in-out;
-  background: #495057;
-  color: #ffffff;
+  background: rgba(216, 223, 232, 0.8);
+  color: gray;
   transform: scale(1.01);
 }
 
@@ -213,7 +213,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   margin: -104px 0 0 -284px;
-  width: calc(80% - 500px);
+  width: calc(80% - 450px);
 }
 
 .buttons {
@@ -225,4 +225,102 @@ button:hover {
   display: flex;
   gap: 8px;
   margin-bottom: 6px;
+}
+
+/*  responsividade */
+
+@media screen and (max-width: 944px) {
+  .left-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 688px;
+    max-width: 80%;
+    height: 168px;
+    margin: 488px auto 0 80px;
+  }
+
+  .with-text {
+    height: 200px;
+    width: 300px;
+    margin-bottom: 60px;
+  }
+
+  .with-text .result {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .left-bar h2 {
+    margin-top: -40px;
+  }
+
+  textarea {
+    top: 25%;
+    left: 60%;
+    width: 588px;
+    height: 224px;
+  }
+
+  .non-text img {
+    display: none;
+  }
+
+  .below {
+    margin-top: -300px;
+    margin-left: -40px;
+    width: 688px;
+    max-width: 90%;
+    gap: 12px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  textarea {
+    left: 60%;
+    width: 400px;
+  }
+
+  .left-bar {
+    margin-bottom: -60px;
+    width: 700px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .left-bar h2 {
+    font-size: 18px;
+  }
+
+  .below {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .encrypy,
+  .descrypt {
+    width: 460px;
+    max-width: 100%;
+  }
+
+  .icon-field {
+    margin-bottom: -4px;
+  }
+}
+
+@media screen and (max-width: 518px) {
+  .with-text button {
+    width: 200px;
+  }
+
+  textarea {
+    left: 85%;
+    width: 400px;
+    margin-top: -20px;
+  }
 }
